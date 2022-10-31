@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>sign up</title>
+</head>
+<body>
+    <div class="signup-box">
+      <h1>Sign Up</h1>
+      
+      <form #signreg="ngForm" (ngSubmit)="signup()" >
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        
+        <label for="" class="form label">E-Mail</label>
+        <input type="email" class="form-control" [(ngModel)]="regdata.email" name="email">
+        
+        <label for="" class="form label">Password</label>
+        <input type="password" id="" class="form-control" [(ngModel)]="regdata.password" name="password">
+        <br><br> <button class="btn-dark">Register</button>
+        </div>
+        </form>
+      
+      <p>
+        By clicking the Sign Up button,you agree to our <br />
+        <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+      </p>
+    </div>
+    <p class="para-2">
+      Already have an account?<a routerLink="../Frontpage">Login here</a>
+    </p>
+  </body>
+</html>

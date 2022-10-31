@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="container">
+                <div class="row">
+                  <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of data1 ">
+
+                    <div class="card" >
+                        <img src={{i.productimage}} class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h4 class="card-title">{{i.productid}}</h4>
+                          <h5 class="card-title">{{i.productname}}</h5>
+                          <p class="card-text">Sale: Rs{{i.productprice}} (Qty:{{i.productquantity}})
+                            Inclusive of all tax
+                          </p>
+                          <a href="https://localhost:4200/cart" class="btn btn-primary">Add to cart</a>
+                        </div>
+                      </div>
+
+                </div>
+                          </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+

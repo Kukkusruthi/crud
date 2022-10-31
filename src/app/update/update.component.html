@@ -1,34 +1,47 @@
+
 <div class="container">
-    <div class="row">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+ 
+  <div class="row">
+      <div class="col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+      <form #create="ngForm">
+ 
+          <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label">Product ID</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" name="productid" [(ngModel)]="product.productid" placeholder="product id">
+            </div>
 
             <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">Product ID</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="product id">
-              </div>
+              <label for="formGroupExampleInput2" class="form-label">Product Name</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" name="productname" [(ngModel)]="product.productname" placeholder="product name">
+            </div>
 
-              <div class="mb-3">
-                <label for="formGroupExampleInput2" class="form-label">Product Name</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="product name">
-              </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Product Category</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" name="productcategory" [(ngModel)]="product.productcategory" placeholder="product category">
+            </div>
 
-              
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Product Quantity</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" name="productQuantity" [(ngModel)]="product.productquantity" placeholder="product quantity">
+            </div>
 
-              <div class="mb-3">
-                <label for="formGroupExampleInput2" class="form-label">Product Quantity</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="product quantity">
-              </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Product Price</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" name="productprice" [(ngModel)]="product.productprice" placeholder="product price">
+            </div>
 
-              
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Product Image</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" name="productimage" [(ngModel)]="product.productimage" placeholder="product price">
+            </div>
 
-              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-primary me-md-2" type="button">update</button>
-               
-              </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn btn-primary me-md-2" type="button" (click)="Updateproduct(product)">Update</button>
+             
+            </div>
 
+          </form>
 
-
-        </div>
-    </div>
+      </div>
+  </div>
 </div>
-

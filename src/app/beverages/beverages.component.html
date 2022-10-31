@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+          <div class="container">
+
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="https://img.freepik.com/premium-vector/healthy-vegetable-grocery-delivery-promotion-food-banner-facebook-cover-web-banner-template_584651-61.jpg?w=2000" class="d-block w-100" alt="...">
+                </div>
+              
+                <div class="carousel-item">
+                  <img src="https://img.freepik.com/premium-psd/vegetable-facebook-cover-template_349013-44.jpg?w=2000" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+
+              <div class="row">
+                  
+                    <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of data1 ">
+
+                      <div class="card" >
+                          <img src={{i.productimage}} class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h4 class="card-title">{{i.productid}}</h4>
+                            <h5 class="card-title">{{i.productname}}</h5>
+                            <p class="card-text">Sale: Rs{{i.productprice}} (Qty:{{i.productquantity}})
+                              Inclusive of all tax
+                            </p>
+                            <a href="https://localhost:4200/cart" class="btn btn-primary">Add to cart</a>
+                          </div>
+                        </div>
+
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </div>

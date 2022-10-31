@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Login</h1>
+                    <h6>Please enter username & password !!</h6>
+                    
+                </div>
+                <form #signreg="ngForm" (ngSubmit)="adminlogin()" >
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Username</label>
+                        <input type="username" class="form-control" id="exampleFormControlInput1" placeholder="username">
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="inputPassword" class="form-label">Password</label>
+                        <div class="col-sm-10">
+                          <input type="password" class="form-control" id="inputPassword" placeholder="password">
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 d-md-block">
+                        <a routerLink="../crud">
+                       <a href=""><button class="btn btn-primary" routerLink="/login" type="button" >Login</button></a> 
+                        </a>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
