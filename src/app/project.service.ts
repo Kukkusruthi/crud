@@ -12,8 +12,23 @@ export class ProjectService {
   public search = new BehaviorSubject<string>("");
 
   pdata:any=[]
+  USER_KEY:any=[]
 
   constructor(private http:HttpClient,private router:Router) { }
+
+
+  public saveUser(user: any): void {
+    window.sessionStorage.removeItem(this.USER_KEY);
+    window.sessionStorage.setItem(this.USER_KEY, JSON.stringify(user));
+
+  }
+
+  public getUser(): any {
+    const user = window.sessionStorage.getItem(this.USER_KEY);
+    if (user) {
+      return JSON.parse(user);
+    }
+  }
 
   Login(loginpg:any){
     return this.http.post<any>("http://localhost:4000/login",loginpg)
@@ -42,6 +57,10 @@ clogin(t3:any){
 Adminlogin(admin:any){
   return this.http.post<any>('http://localhost:4000/adminlogin',admin)
 }
+Addcart(i:any){
+  return this.http.post<any>('http://localhost:4000/addtocart',i)
+}
+
 
 saveproduct(i:any){
    this.pdata = i
@@ -50,8 +69,8 @@ receiveproduct(){
   return this.pdata
 }
 
-getProducts(){
-  return this.productList.asObservable();
+getProducts(i:any){
+  return this.http.post<any>('http://localhost:4000/getproducts',i)
 }
 
 setProduct(product : any){
@@ -83,6 +102,11 @@ removeAllCart(){
   this.cartItemList = []
   this.productList.next(this.cartItemList);
 }
+
+removeproduct=(id:any)=>{
+  return this.http.delete<any>("http://localhost:4000/removeproduct/"+id)
+}
+
 
 }
 

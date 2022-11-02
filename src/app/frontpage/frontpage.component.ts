@@ -19,9 +19,13 @@ export class FrontpageComponent implements OnInit {
   ngOnInit(): void {
   }
   Clogin(){
+    console.log(this.regdata)
     this.api.clogin(this. regdata).subscribe((regdata)=>{
+      console.log(regdata)
       if(regdata.success === true){
-        this.router.navigate(['/frontpage'])
+        console.log(regdata)
+        this.api.saveUser(regdata.regdata)
+        this.router.navigate(['/Homepage'])
       }
       else
       {

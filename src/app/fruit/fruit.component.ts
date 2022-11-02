@@ -11,8 +11,13 @@ export class FruitComponent implements OnInit {
     productcategory:"Fruit"
   }
   constructor(private api:ProjectService) { }
-
+  log:any=[]
   ngOnInit(): void {
+    this.log=this.api.getUser()
+    if(this.log){
+      console.log(this.log)
+      
+    }
     this.api.viewprdt(this.fruit).subscribe(
       (data)=>{
         console.log(data)
@@ -20,6 +25,20 @@ export class FruitComponent implements OnInit {
       }
     )
     
+  }
+
+  addcart(i:any)
+  {
+    i.email=this.log.email
+    console.log(i)
+    this.api.Addcart(i).subscribe((data)=>{
+       
+        console.log(data)
+  
+    })
+
+    
+   
   }
 data1:any=[]
 }
